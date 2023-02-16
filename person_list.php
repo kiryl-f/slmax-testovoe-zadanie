@@ -24,7 +24,7 @@ if(class_exists('Person')) {
         }
 
         public function removePeople() {
-            $sql = "DELETE FROM people WHERE id >= '$this->first_id' AND id <= '$this->last_id''";
+            $sql = "DELETE FROM people WHERE id >= '$this->first_id' AND id <= '$this->last_id'";
             mysqli_query($this->conn, $sql);
         }
     }
