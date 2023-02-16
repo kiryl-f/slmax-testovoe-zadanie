@@ -16,7 +16,7 @@ if(class_exists('Person')) {
             $this->last_id = end($ids);
             $sql = "SELECT * FROM people WHERE id >= '$this->first_id' AND id <= '$this->last_id'";
             $query = mysqli_query($this->conn, $sql);
-            $people = mysqli_fetch_all($query, MYSQLI_ASSOC);
+            $this->people = mysqli_fetch_all($query, MYSQLI_ASSOC);
         }
 
         public function getPeople(): array {
